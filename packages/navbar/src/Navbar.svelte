@@ -126,4 +126,18 @@
   .not-logged-in:hover {
     opacity: 1;
   }
+
+  @media screen and (max-width: 768px) {
+    .not-logged-in {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+    .action {
+      transform: scale(.75);
+      transform-origin: right center;
+    }
+  }
+  
 </style>

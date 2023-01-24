@@ -38,7 +38,7 @@ Live demo available at https://single-spa.jurele.lt
 
    - Also attempt going to [/home](http://localhost:9000/home) route directly. It will redirect you back to login since there is no valid user.
 
-1. Log in using **user** with **password** as the password.<br/>Once logged in, you will be redirected to [/home](http://localhost:9000/home). If you try going back to [/login](http://localhost:9000/login) you'll no longer be able to and will be redirected back to home.
+1. Log in using **user** with **pass** as the password.<br/>Once logged in, you will be redirected to [/home](http://localhost:9000/home). If you try going back to [/login](http://localhost:9000/login) you'll no longer be able to and will be redirected back to home.
 
 ### Logout
 
