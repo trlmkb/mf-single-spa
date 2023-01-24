@@ -1,0 +1,20 @@
+.homepage {
+  color: #8b8b8b;
+  font-size: 4.8rem;
+}
+
+.homepage strong {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.homepage strong::before {
+  content: "";
+  height: 12px;
+  width: 98%;
+  left: 12px;
+  bottom: 8px;
+  z-index: -1;
+  background: #ff3454;
+  position: absolute;
+}
