@@ -24,17 +24,19 @@
   });
 </script>
 
-<header class="header">
-  <nav>
-    <Router>
-      {#if $auth.sessionToken}
+{#if $auth.sessionToken}
+  <header class="header">
+    <nav>
+      <Router>
         <span>Welcome, <strong>User</strong>!</span>
         <button class="action" type="button" on:click|once={logout}>Logout</button
         >
-      {:else}<span>You are not logged in.</span>{/if}
-    </Router>
-  </nav>
-</header>
+      </Router>
+    </nav>
+  </header>
+{:else}
+  <span class="not-logged-in"><strong>Tip:</strong> You are not logged in.</span>
+{/if}
 
 <style>
   .header {
@@ -58,11 +60,6 @@
     align-items: center;
     width: 100%;
     place-content: space-between;
-  }
-
-  nav span {
-    
-    color: #676767;
   }
 
   nav span strong {
@@ -107,5 +104,26 @@
     border-color: #404cfa;
     color: #fff;
     outline: 0;
+  }
+
+  .not-logged-in {
+    padding: 4vmin 4rem;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    opacity: .1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: opacity 150ms linear;
+    cursor: help;
+  }
+  .not-logged-in:hover {
+    opacity: 1;
   }
 </style>

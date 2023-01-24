@@ -30,7 +30,7 @@ This example consists of:
 
 ## Details
 
-Live demo available at https://single-spa-example-rxjs-shared-state.netlify.app/login
+Live demo available at https://single-spa.jurele.lt
 
 ### Login and guards
 
@@ -66,8 +66,3 @@ By doing so, you introduce:
 
 See also ["How can I share application state between applications?"](https://single-spa.js.org/docs/faq/#how-can-i-share-application-state-between-applications) and ["Recommended Setup: UI State"](https://single-spa.js.org/docs/recommended-setup/#ui-state) on the single-spa documentation.
 
-### Why not do the auth check inside of the root-config?
-
-Definitely could be done! The implementation of _how auth happens_ is **not the focus** of this repo.
-
-For an example of how to do that, check out the [`check-auth-in-root-config` branch](https://github.com/filoxo/single-spa-example-rxjs-shared-state/tree/check-auth-in-root-config).
