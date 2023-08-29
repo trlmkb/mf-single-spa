@@ -52,7 +52,7 @@
     place-content: space-between;
   }
   nav {
-    color: #f8f8f8;
+    color: #555;
     font: inherit;
     font-size: 1.6rem;
     display: flex;
@@ -66,7 +66,7 @@
     position: relative;
     z-index: 1;
     font-weight: 700;
-    color: #fff;
+    color: #000;
   }
   nav span strong::before {
     content: "";

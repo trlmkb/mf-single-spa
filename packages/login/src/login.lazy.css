@@ -7,7 +7,7 @@ h1 {
   color: #ffffff;
   margin: 0 0 2rem;
   line-height: 1.25;
-  background: -webkit-linear-gradient(#fff, #e3e3e3);
+  background: -webkit-linear-gradient(#000, purple);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -15,16 +15,16 @@ h1 {
 .login-form {
   border-radius: 8px;
   display: flex;
-  background-color: #151515;
-  background-image:
+  background-color: #fafafa;
+  /* background-image:
     linear-gradient(to right, transparent, rgba(255, 255, 255, .4), transparent),
     linear-gradient(-225deg, #151515, #181818 50%, transparent 0, transparent);
   background-size: 100% 1px, 100% 100%;
   background-repeat: no-repeat;
-  background-position: 0 0, 0 0;
-  box-shadow: inset 0 -1px #111, 0 0 8px rgba(0,0,0,.75);
+  background-position: 0 0, 0 0; */
+  box-shadow: inset 0 -1px #dfdfdf, 0 0 8px rgba(255, 255, 255,.75);
   flex-direction: column;
-  padding: 4.8rem 8rem;
+  padding: 4.8rem 8rem 5.8rem 8rem;
   width: 40rem;
   position: relative;
   z-index: 1;
@@ -32,7 +32,7 @@ h1 {
 }
 
 .login-form::before {
-  content: '';
+  /* content: ''; */
   background-image: linear-gradient(45deg, hsl(240deg 100% 50%), hsl(0deg 100% 50%));
   content: '';
   position: absolute;
@@ -59,7 +59,9 @@ h1 {
 }
 
 .login-form label {
-  color: #777;
+  background: -webkit-linear-gradient(#000, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 0.4rem;
   display: block;
   transition: color 0.2s ease-in-out;
@@ -68,23 +70,23 @@ h1 {
 }
 
 .login-form input {
-  --color: rgba(255,255,255 , .43);
+  --color: rgba(0,0,0 , .43);
   /* --splash: rgb(96 0 252 / 55%); */
   --splash: rgba(255,255,255,.15);
   border: 0;
-  background-color: #111;
-  background-image: 
+  background-color: #f0f0f0;
+  /* background-image: 
     linear-gradient(to right, transparent, var(--color), transparent);
   background-size: 100% 1px;
   background-repeat: no-repeat;
-  background-position: 0 100%;
+  background-position: 0 100%; */
   border-radius: 4px;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.15), 0 1px rgba(255,255,255,.05);
+  /* box-shadow: inset 0 1px 2px rgba(0,0,0,.15), 0 1px rgba(255,255,255,.05); */
   height: 4.8rem;
   padding: 1.2rem;
   margin-bottom: 2rem;
   width: 100%;
-  color: #fff;
+  color: #000;
   font: inherit;
   font-weight: 700;
   font-size: 2rem;
@@ -92,9 +94,13 @@ h1 {
 }
 
 .login-form input:focus {
+  outline: 4px dashed black;
+}
+
+/* .login-form input:focus {
   --color: rgba(255,255,255 , .8);
   outline: 0;
-}
+} */
 
 @keyframes input {
   from {
