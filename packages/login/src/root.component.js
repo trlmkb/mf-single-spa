@@ -29,7 +29,8 @@ export default function Root(props) {
   };
 
   return (
-    <div>
+    <div class="login-form-wrapper">
+      <strong class="login-form-mf-name">@login/index</strong>
       <form name="login" className="login-form" onSubmit={onSubmit}>
         <h1>Login</h1>
         <div className="input-wrap">

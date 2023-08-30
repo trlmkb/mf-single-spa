@@ -110,7 +110,6 @@
   }
 
   .not-logged-in {
-    margin: auto;
     border-radius: 4px;
     text-align: center;
     color: #696daf;

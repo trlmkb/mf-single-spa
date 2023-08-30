@@ -12,6 +12,29 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+.login-form-wrapper {
+  position: relative;
+  
+}
+.login-form-mf-name {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  z-index: 2;
+  font-weight: 700;
+  color: #000;
+  font-size: 14px;
+}
+.login-form-mf-name::before {
+  content: "";
+  height: 5px;
+  width: 98%;
+  left: 4px;
+  bottom: 1px;
+  z-index: -1;
+  background: color(srgb 1 0.2 0.33 / 0.37);
+  position: absolute;
+}
 .login-form {
   border-radius: 8px;
   display: flex;
