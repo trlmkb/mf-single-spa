@@ -13,8 +13,8 @@
   height: 12px;
   width: 98%;
   left: 12px;
-  bottom: 8px;
+  bottom: 2px;
   z-index: -1;
-  background: #ff3454;
+  background: color(srgb 1 0.2 0.33 / 0.37);
   position: absolute;
 }

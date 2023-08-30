@@ -24,23 +24,26 @@
   });
 </script>
 
+<header class="header">
+  <strong class="mf-name">@components-library/navbar</strong>
 {#if $auth.sessionToken}
-  <header class="header">
     <nav>
       <Router>
-        <span>Welcome, <strong>User</strong>!</span>
-        <button class="action" type="button" on:click|once={logout}>Logout</button
-        >
-      </Router>
-    </nav>
+        <span>Welcome, <strong>User</strong></span>
+          <button class="action" type="button" on:click|once={logout}>Logout</button
+            >
+          </Router>
+        </nav>
+  
+      {:else}
+  
+    <span class="not-logged-in"><strong>Tip:</strong> You are not logged in.</span>
+    {/if}
   </header>
-{:else}
-  <span class="not-logged-in"><strong>Tip:</strong> You are not logged in.</span>
-{/if}
 
 <style>
   .header {
-    border-bottom: 1px solid #222;
+    border-bottom: 10px solid #404cfa;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -58,27 +61,27 @@
     display: flex;
     gap: 2rem;
     align-items: center;
-    width: 100%;
     place-content: space-between;
   }
 
-  nav span strong {
+  .mf-name {
     position: relative;
     z-index: 1;
     font-weight: 700;
     color: #000;
+    font-size: 14px;
   }
-  nav span strong::before {
+  .mf-name::before {
     content: "";
     height: 5px;
     width: 98%;
     left: 4px;
     bottom: 1px;
     z-index: -1;
-    background: #ff3454;
+    background: color(srgb 1 0.2 0.33 / 0.37);
     position: absolute;
-
   }
+  
 
   nav .action {
     background: none;
@@ -107,24 +110,12 @@
   }
 
   .not-logged-in {
-    padding: 4vmin 4rem;
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
+    margin: auto;
     border-radius: 4px;
     text-align: center;
-    color: #fff;
-    opacity: .1;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+    color: #696daf;
     transition: opacity 150ms linear;
     cursor: help;
-  }
-  .not-logged-in:hover {
-    opacity: 1;
   }
 
   @media screen and (max-width: 768px) {
